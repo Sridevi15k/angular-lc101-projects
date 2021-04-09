@@ -1,0 +1,10 @@
+.chores {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: purple;
+    font-size: 1.5em;
+}
+
+li {
+    font-style: italic;
+    text-decoration: underline;
+}
