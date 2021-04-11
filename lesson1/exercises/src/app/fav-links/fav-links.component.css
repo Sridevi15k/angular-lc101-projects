@@ -1,0 +1,13 @@
+.centerlink {
+  color: black;
+  font-weight: bolder;
+  margin: 50px 0 0 700px;
+  border-color: black;
+  border-style: ridge;
+  padding: 2px 2px 2px 2px;
+}
+img {
+  margin: 50px 0 0 600px;
+  width: 20%;
+  height: auto;
+}

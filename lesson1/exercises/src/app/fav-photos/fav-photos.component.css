@@ -1,12 +1,18 @@
 h3 {
-   color: brown;
+  color: brown;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 img {
-      width: 20%;
-      height: auto;
+  width: 50%;
+  height: auto;
 }
 
 .photos {
-   text-align: center;
+  text-align: center;
+  height: 350px;
+  border-right: 1px solid #000900;
+  position: absolute;
+  right: 50%;
 }
