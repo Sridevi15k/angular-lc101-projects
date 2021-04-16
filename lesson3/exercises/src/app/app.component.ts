@@ -25,7 +25,7 @@ export class AppComponent {
     }
   }
 
-  handleLand() {
+  handleLand(rocketImage) {
     let result = window.confirm('The shuttle is landing');
     if(result) {
       this.color = 'green';
@@ -33,10 +33,12 @@ export class AppComponent {
       this.width = 0;
       this.message = 'The shuttle has landed.'
       this.takeOffEnabled = true;
+      rocketImage.style.bottom = '0px';
+      rocketImage.style.left = '0px';
     }
   }
 
-  handleAbort() {
+  handleAbort(rocketImage) {
     let result = window.confirm('Do you want to abort the mission?');
     if (result) {
       this.color = 'red';
@@ -44,10 +46,12 @@ export class AppComponent {
       this.width = 0;
       this.message = 'Mission aborted';
       this.takeOffEnabled =  true;
+      rocketImage.style.bottom = '0px';
+      rocketImage.style.left = '0px';
     }
   }
 
-  moveRocket(rocketImage, direction) {
+  moveRocket(rocketImage, direction) { 
     if(direction === 'right') {
        let movement = parseInt(rocketImage.style.left) + 10 + 'px';
        rocketImage.style.left = movement;
@@ -65,5 +69,16 @@ export class AppComponent {
       rocketImage.style.bottom = movement;
       this.height = this.height - 10000;
     }
+  
+    this.rocketAtEdge(this.width, this.height);
   }
+
+  rocketAtEdge(width, height) {
+     if (width > 120000 || width < 0 || height < 0 || height > 300000) {
+         this.color = 'orange';
+     } else {
+       this.color = 'blue';
+     }
+   }
+
 }
